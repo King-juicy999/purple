@@ -1,0 +1,38 @@
+// Generate placeholder SVG for about section
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const IMAGES_DIR = path.join(__dirname, '..', 'images');
+
+function generateSVG() {
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A0B2E"/>
+      <stop offset="100%" style="stop-color:#0D051A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#C9A15C"/>
+      <stop offset="100%" style="stop-color:#E8C58A"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  <circle cx="300" cy="300" r="100" fill="none" stroke="url(#accent)" stroke-width="4" opacity="0.2"/>
+  <circle cx="300" cy="300" r="70" fill="none" stroke="url(#accent)" stroke-width="2" opacity="0.4"/>
+  <circle cx="300" cy="300" r="30" fill="url(#accent)" opacity="0.8"/>
+  <text x="300" y="450" font-family="Georgia, serif" font-size="28" fill="#C9A15C" text-anchor="middle" font-weight="bold">Amy</text>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="16" fill="#C9A15C" text-anchor="middle" opacity="0.7">Founder & Creative Director</text>
+  <line x1="250" y1="510" x2="350" y2="510" stroke="url(#accent)" stroke-width="2" opacity="0.5"/>
+  <text x="300" y="540" font-family="Georgia, serif" font-size="14" fill="#C9A15C" text-anchor="middle" opacity="0.5">Purple Ribbons by Amy</text>
+  <text x="300" y="565" font-family="Georgia, serif" font-size="12" fill="#C9A15C" text-anchor="middle" opacity="0.4">Lagos, Nigeria • Est. 2015</text>
+</svg>`;
+}
+
+const filepath = path.join(IMAGES_DIR, 'about-portrait.svg');
+const svgContent = generateSVG();
+fs.writeFileSync(filepath, svgContent);
+console.log(`  ✓ Generated ${filepath}`);

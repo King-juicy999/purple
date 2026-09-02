@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A0B2E"/>
+      <stop offset="100%" style="stop-color:#0D051A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#C9A15C"/>
+      <stop offset="100%" style="stop-color:#E8C58A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="600" cy="350" r="80" fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.3"/>
+  <circle cx="600" cy="350" r="50" fill="none" stroke="url(#accent)" stroke-width="2" opacity="0.5"/>
+  <circle cx="600" cy="350" r="20" fill="url(#accent)" opacity="0.8"/>
+  <text x="600" y="500" font-family="Georgia, serif" font-size="32" fill="#C9A15C" text-anchor="middle" font-weight="bold">First Anniversary</text>
+  <text x="600" y="540" font-family="Georgia, serif" font-size="18" fill="#C9A15C" text-anchor="middle" opacity="0.7">Purple Ribbons by Amy</text>
+  <line x1="500" y1="560" x2="700" y2="560" stroke="url(#accent)" stroke-width="2" opacity="0.5"/>
+  <text x="600" y="590" font-family="Georgia, serif" font-size="14" fill="#C9A15C" text-anchor="middle" opacity="0.5">Lagos, Nigeria • Est. 2015</text>
+</svg>
